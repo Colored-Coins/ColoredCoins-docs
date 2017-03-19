@@ -336,4 +336,4 @@ Congratulations! You were able to issue digital currencies for the citizens of L
 
 You can use what you learned in your own app. Give it a try! Remember that when you're ready to push your app to a production environment, you should be using `mainnet`, and you should be taking care of funding transactions with real bitcoins.
 
-And don't forget to tell us what you built! We're waiting for you at the [ColoredCoins Slack Team(http://slack.coloredcoins.org/).
+And don't forget to tell us what you built! We're waiting for you at the [ColoredCoins Slack Team](http://slack.coloredcoins.org/).
