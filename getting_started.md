@@ -2,7 +2,7 @@
 
 Thank you for your interest in ColoredCoins! In this guide, we will explain how to quickly set up and start using the open source ColoredCoins SDK.
 
-The SDK is meant to be used in your own apps, in order to enable creating and transacting digital assets using the ColoredCoins protocol. It's a JavaScript SDK, which can be used in a browser or in a Node.js app. You can use the SDK in a client app, allowing all users to manipulate their tokens securely with their own keys, or you can deploy it on a server-side app and manage transactions on your trusted server.
+The SDK is meant to be used in your own apps, in order to enable creating and transacting digital assets using the [ColoredCoins protocol](https://github.com/Colored-Coins/Colored-Coins-Protocol-Specification). It's a JavaScript SDK, which can be used in a browser or in a Node.js app. You can use the SDK in a client app, allowing all users to manipulate their tokens securely with their own keys, or you can deploy it on a server-side app and manage transactions on your trusted server.
 
 We will be using Node.js in this guide. Please make sure [you have it installed](https://nodejs.org/en/) before continuing!
 
@@ -24,7 +24,7 @@ Finally, we'll add the ColoredCoins SDK to our package.json file and install:
 npm install --save coloredcoins-sdk
 ```
 
-By default, the SDK is set up to use our Community-Hosted Node of ColoredCoins Core, which validates transactions and allows inspecting the state of the network. So there's no need to install anything else, you can start coding! After you gain some confidence with the SDK, we encourage you to install your own instance of ColoredCoins Core in a controlled environment and use that, for improved security.
+By default, the SDK is set up to use our Community-Hosted Node of ColoredCoins Core, which validates transactions and allows inspecting the state of the network. So there's no need to install anything else, you can start coding! After you gain some confidence with the SDK, we encourage you to install your own instance of ColoredCoins Core in a controlled environment and use that, for improved security. We'll be releasing ColoredCoins Core very soon, but if you'll want to set up your own backend immediately after completing the guide, you may run our [Docker Node](https://github.com/Colored-Coins/colored-coins-docker-node) which is less optimized and more resource-intensive, but fills the same part. You'll find more information about it [here](https://github.com/Colored-Coins/colored-coins-docker-node).
 
 ## Initialization
 
@@ -37,9 +37,11 @@ ColoredCoins is using the Bitcoin network, and in Bitcoin each stakeholder in th
 
 The "mnemonic" is a random list of 12 words that will be automatically by the SDK, representing a *private seed*, from which many *private keys* are created, each with its own *public address*. We allow multiple addresses per user for flexibility, but you can think of the *mnemonic* as a private password that represents an identity in the system.
 
+You can read more about these concepts in the followin BIPs (Bitcoin Improvement Proposals): [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) which covers creating the mnemonic itself, and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) which define Hierarchical Deterministic Wallets, a method to derive multiple keys from a single seed.
+
 ### What's a network?
 
-Bitcoin transactions have a cost attached - miner fees. These can range from a few cents to a Dollar or more, based on current traffic in the network. To allow development and testing without paying those fees, there's a "test network" for Bitcoin, called `testnet` for short. This network isn't secure for real-value transactions, but you can transact for free. Transactions still have fees, but the fees are paid in "test bitcoins", which you can get for free from "Testnet Bitcoin Faucets", websites that will send you free test bitcoins to help with development.
+Bitcoin transactions have a cost attached - miner fees. These can range from a few cents to a Dollar or more, based on current traffic in the network. To allow development and testing without paying those fees, there's a "test network" for Bitcoin, called `testnet` for short. This network isn't secure for real-value transactions, but you can transact for free. Transactions still have fees, but the fees are paid in "test bitcoins", which you can get for free from "Testnet Bitcoin Faucets", websites that will send you free test bitcoins to help with development. You can search for some on Google, or try [this one](http://tpfaucet.appspot.com/).
 
 One your app is ready for production, you'll switch it to `mainnet`, the "real money" Bitcoin network.
 
