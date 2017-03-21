@@ -37,7 +37,7 @@ ColoredCoins is using the Bitcoin network, and in Bitcoin each stakeholder in th
 
 The "mnemonic" is a random list of 12 words that will be automatically by the SDK, representing a *private seed*, from which many *private keys* are created, each with its own *public address*. We allow multiple addresses per user for flexibility, but you can think of the *mnemonic* as a private password that represents an identity in the system.
 
-You can read more about these concepts in the followin BIPs (Bitcoin Improvement Proposals): [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) which covers creating the mnemonic itself, and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) which define Hierarchical Deterministic Wallets, a method to derive multiple keys from a single seed.
+You can read more about these concepts in the following BIPs (Bitcoin Improvement Proposals): [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) which covers creating the mnemonic itself, and [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) which define Hierarchical Deterministic Wallets, a method to derive multiple keys from a single seed.
 
 ### What's a network?
 
